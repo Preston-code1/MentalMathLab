@@ -1,0 +1,45 @@
+:root {
+    --margin-line: linear-gradient(to right, transparent 0px, transparent 59px, #e8a0a0 60px, #e8a0a0 61px, transparent 62px);
+    --rule-lines: repeating-linear-gradient(to bottom, transparent 0px, transparent 27px, #c9d6e3 28px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fdfcf7;
+    line-height: 28px;
+}
+
+nav {
+    background-color: #fdfcf7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 30px 100px;
+    position: sticky;
+    top: 0;
+    background-image: var(--margin-line);
+}
+
+main {
+    display: block;
+    min-height: 100vh;
+    background-image: var(--rule-lines), var(--margin-line);
+}
+
+.logo {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    color: black;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
