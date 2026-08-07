@@ -113,3 +113,59 @@ ul li a:hover {
     }
 
 }
+
+main {
+    margin: 0 auto;
+    padding: 3rem 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    border: 1px dashed #888b8a;
+    border-radius: 12px;
+    padding: 0.7rem 0.9rem;
+    margin: 20px 20px;
+    width: fit-content;
+}
+
+.filters button {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: none;
+    padding: 0.5rem;
+}
+
+.filters button:hover {
+    border: 1px solid #888b8a;
+    background: none;
+}
+
+.filters button.active {
+    border: 1px solid transparent;
+    background: rgb(135, 135, 255);
+}
+
+.spacer {
+    width: 1px;
+    height: 20px;
+    background-color: #888b8a;
+    margin: 0 0.3rem;
+}
+
+.card {
+    border: 1px solid #888b8a;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 20px;
+    width: fit-content;
+    padding: 1rem 2rem;
+}
+
+.card-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
