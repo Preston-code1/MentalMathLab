@@ -1,7 +1,14 @@
 :root {
     --nav-height: 60px;
-    --link-color2: #000000;
-    --link-color: #888b8a;
+
+    --link-color: #6B6B6B;
+    --link-hover-color: #000000;
+
+    --text-color: #222;
+    --muted-text: #676a69;
+    --border-color: #888b8a;
+    --light-border: #e0e0e0;
+
     --bg-color: #fdfcf7;
 }
 
@@ -56,7 +63,7 @@ ul li a {
 
 ul li a:hover {
     text-decoration: underline;
-    color: var(--link-color2);
+    color: var(--link-hover-color);
     text-underline-offset: 4px;
 }
 
@@ -123,13 +130,28 @@ main {
     z-index: 1;
 }
 
+header {
+    margin: 1rem 0 1.2rem;
+    padding: 0;
+}
+
+header h1 {
+    margin: 0 0 0.4rem;
+}
+
+header p {
+    margin: 0;
+    color: var(--muted-text);
+}
+
 .filters {
     display: flex;
     align-items: center;
-    border: 1px dashed #888b8a;
+    gap: 0.25rem;
+    border: 1px dashed var(--border-color);
     border-radius: 12px;
-    padding: 0.7rem 0.9rem;
-    margin: 20px 0;
+    padding: 0.5rem 0.7rem;
+    margin: 12px 0 2rem;
     width: fit-content;
 }
 
@@ -137,24 +159,28 @@ main {
     border: 1px solid transparent;
     border-radius: 12px;
     background: none;
-    padding: 0.5rem;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 
 .filters button:hover {
-    border: 1px solid #888b8a;
-    background: none;
+    border-color: var(--border-color);
 }
 
 .filters button.active {
-    border: 1px solid transparent;
     background: rgb(135, 135, 255);
     color: var(--bg-color);
+}
+
+.filters button.active:hover {
+    border-color: transparent;
 }
 
 .spacer {
     width: 1px;
     height: 20px;
-    background-color: #888b8a;
+    background-color: var(--border-color);
     margin: 0 0.3rem;
 }
 
@@ -183,7 +209,7 @@ main {
 }
 
 .card {
-    border: 1px solid #888b8a;
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1rem 1.25rem;
     margin: 0;
@@ -193,7 +219,7 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -210,7 +236,7 @@ main {
 }
 
 .card .start-btn {
-    background-color: #888b8a;
+    background-color: var(--border-color);
     color: var(--bg-color);
     border: none;
     padding: 0.5rem 1rem;
