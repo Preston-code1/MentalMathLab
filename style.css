@@ -2,6 +2,7 @@
     --nav-height: 60px;
     --link-color2: #000000;
     --link-color: #888b8a;
+    --bg-color: #fdfcf7;
 }
 
 * {
@@ -12,7 +13,7 @@
 }
 
 body {
-    background-color: #fdfcf7;
+    background-color: var(--bg-color);
 }
 
 nav {
@@ -27,7 +28,7 @@ nav {
 
 
 .logo {
-    font-family: 'Kalam', cursive;
+    /*font-family: 'Kalam', cursive;*/
     font-weight: 700;
     font-size: 2rem;
     color: black;
@@ -98,7 +99,7 @@ ul li a:hover {
     #menu {
         display: none;
         width: 100%;
-        background: #fdfcf7;
+        background: var(--bg-color);
         border-bottom: 1px solid #e0e0e0;
         position: absolute;
         top: var(--nav-height);
@@ -115,8 +116,9 @@ ul li a:hover {
 }
 
 main {
+    width: min(100% - 40px, 1200px);
     margin: 0 auto;
-    padding: 3rem 2rem 0;
+    padding-top: 3rem;
     position: relative;
     z-index: 1;
 }
@@ -127,7 +129,7 @@ main {
     border: 1px dashed #888b8a;
     border-radius: 12px;
     padding: 0.7rem 0.9rem;
-    margin: 20px 20px;
+    margin: 20px 0;
     width: fit-content;
 }
 
@@ -146,6 +148,7 @@ main {
 .filters button.active {
     border: 1px solid transparent;
     background: rgb(135, 135, 255);
+    color: var(--bg-color);
 }
 
 .spacer {
@@ -155,17 +158,79 @@ main {
     margin: 0 0.3rem;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        width: min(100% - 30px, 500px);
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
 .card {
     border: 1px solid #888b8a;
     border-radius: 12px;
-    padding: 1rem;
-    margin: 20px;
-    width: fit-content;
-    padding: 1rem 2rem;
+    padding: 1rem 1.25rem;
+    margin: 0;
+    width: auto;   
+    min-width: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .card-footer {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.card .start-btn {
+    background-color: #888b8a;
+    color: var(--bg-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.card .start-btn:hover {
+    background-color: #666;
+}
+
+.easy-difficulty {
+    color: green;
+}
+
+.medium-difficulty {
+    color: orange;
+}
+
+.hard-difficulty {
+    color: red;
 }
