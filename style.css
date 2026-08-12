@@ -59,6 +59,7 @@ ul li a {
     text-decoration: none;
     color: var(--link-color);
     font-size: 1.2rem;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 ul li a:hover {
@@ -81,9 +82,11 @@ ul li a:hover {
     .menuBtn {
         display: block;
     }
+
     nav.menu-open .menuBtn {
         display: none;
     }
+
     nav.menu-open .closeBtn {
         display: block;
     }
@@ -91,10 +94,12 @@ ul li a:hover {
     ul {
         display: none;
     }
+
     ul li{
         display: block;
-        margin: 20px;
+        margin: 25px;
     }
+
     .menuBtn {
         display: block;
     }
@@ -255,6 +260,10 @@ header p {
 
 .card .start-btn:hover {
     background-color: rgb(92, 92, 198);
+}
+
+.card .start-btn:active {
+    background-color: rgb(75, 75, 160);
 }
 
 .easy-difficulty {
