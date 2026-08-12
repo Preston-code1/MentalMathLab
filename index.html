@@ -25,14 +25,14 @@
     </nav>
 
     <main>
-        
+
         <header>
             <h1>Tricks library</h1>
             <p>Pick a trick, learn how to do it, then practice it.</p>
         </header>
     
         <div class="filters">
-            <button data-filter="all">All</button>
+            <button class="active" data-filter="all">All</button>
             <div class="spacer"></div>
             <button data-filter="addition">Add</button>
             <button data-filter="subtraction">Subtract</button>
@@ -42,7 +42,7 @@
 
         <div class="gallery">
 
-            <div class="card">
+            <div class="card" data-category="multiplication">
                 <h2>Multiply by 11</h2>
                 <p>Learn how to multiply any two-digit number by 11 in your head.</p>
                 <div class="card-footer">
@@ -55,9 +55,9 @@
                 </div>
             </div>
 
-            <div class="card">
-                <h2>Multiply by 11</h2>
-                <p>Learn how to multiply any two-digit number by 11 in your head.</p>
+            <div class="card" data-category="multiplication">
+                <h2>Square Numbers Ending in 5</h2>
+                <p>Quickly square any number ending in 5 without doing traditional multiplication.</p>
                 <div class="card-footer">
                     <div class="tags">
                         <span class="easy-difficulty">easy</span>
@@ -68,22 +68,22 @@
                 </div>
             </div>
 
-            <div class="card">
-                <h2>Multiply by 11</h2>
-                <p>Learn how to multiply any two-digit number by 11 in your head.</p>
+            <div class="card" data-category="addition">
+                <h2>Make a 10</h2>
+                <p>Use numbers that add to 10 to make addition problems faster and easier.</p>
                 <div class="card-footer">
                     <div class="tags">
                         <span class="easy-difficulty">easy</span>
                         <span>·</span>
-                        <span class="multi-category">multiplication</span>
+                        <span class="add-category">addition</span>
                     </div>
                     <button class="start-btn">Start</button>
                 </div>
             </div>
 
-            <div class="card">
-                <h2>Multiply by 11</h2>
-                <p>Learn how to multiply any two-digit number by 11 in your head.</p>
+            <div class="card" data-category="multiplication">
+                <h2>Multiply by 15</h2>
+                <p>Multiply by 10 and add half of the original number.</p>
                 <div class="card-footer">
                     <div class="tags">
                         <span class="medium-difficulty">medium</span>
@@ -94,9 +94,9 @@
                 </div>
             </div>
 
-            <div class="card">
-                <h2>Multiply by 11</h2>
-                <p>Learn how to multiply any two-digit number by 11 in your head.</p>
+            <div class="card" data-category="multiplication">
+                <h2>Multiply Near 100</h2>
+                <p>Use the distance from 100 to quickly multiply numbers close to 100.</p>
                 <div class="card-footer">
                     <div class="tags">
                         <span class="hard-difficulty">hard</span>
