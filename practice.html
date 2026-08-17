@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tricks</title>
+    <title>Practice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="practice-page">
 
     <nav>
         <div class="logo">Mental Math Lab</div>
@@ -25,9 +25,40 @@
     </nav>
 
     <main>
-        <h1>practice</h1>
+        <div class="catergories">
+            <button class="active">Add</button>
+            <button>Subtract</button>
+            <button>Multiply</button>
+            <button>Divide</button>
+        </div>
+
+        <div class="numbers">
+            <div class="digits">
+                <p>digits:</p>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+            <div class="range">
+                <p>range: 1-100</p>
+
+                <div class="slide-container">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+            </div>
+        </div>
+
+        <div class="equation">
+            67 + 41 = ?
+        </div>
 
     </main>
+
+    <footer>
+        <p>0 streak</p>
+        <p>0% accuracy</p>
+        <p>2.3s avg time</p>
+    </footer>
     
     <script src="script.js"></script>
 </body>

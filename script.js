@@ -35,3 +35,22 @@ buttons.forEach(button => {
         })
     });
 });
+
+//toggle for practice page
+function setupToggleButtons(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+
+    container.addEventListener('click', (e) => {
+
+        if (e.target.tagName === 'BUTTON') {
+
+            container.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
+        }
+
+    });
+}
+
+setupToggleButtons('.catergories');
+setupToggleButtons('.digits');
