@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="practice-page">
+<body>
 
     <nav>
         <div class="logo">Mental Math Lab</div>
@@ -32,24 +32,45 @@
             <button>Divide</button>
         </div>
 
-        <div class="numbers">
-            <div class="digits">
-                <p>digits:</p>
-                <button class="active">1</button>
-                <button>2</button>
-                <button>3</button>
-            </div>
-            <div class="range">
-                <p>range: 1-100</p>
-
-                <div class="slide-container">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <div class="range">
+            <div class="num-group">
+                <span>First Number</span>
+                <div class="inputs">
+                    <label for="">
+                        <span>Min:</span>
+                        <input type="number" name="" id="" value="1" min="1" max="999">
+                    </label>
+                    <span class="range-separator">to</span>
+                    <label for="">
+                        <span>Max:</span>
+                        <input type="number" name="" id="" value="10" min="1" max="999">
+                    </label>
                 </div>
             </div>
-        </div>
 
-        <div class="equation">
-            67 + 41 = ?
+            <div class="spacer"></div>
+
+            <div class="num-group">
+                <span>Second Number</span>
+                <div class="inputs">
+                    <label for="">
+                        <span>Min:</span>
+                        <input type="number" name="" id="" value="1" min="1" max="999">
+                    </label>
+                    <span class="range-separator">to</span>
+                    <label for="">
+                        <span>Max:</span>
+                        <input type="number" name="" id="" value="10" min="1" max="999">
+                    </label>
+                </div>
+
+            </div>
+        </div>
+            
+        <div class="workspace">
+            <h1 class="equation">67 + 41 = ?</h1>
+
+            <input type="number" name="" id="user-answer" placeholder="your answer" autofocus>
         </div>
 
     </main>
