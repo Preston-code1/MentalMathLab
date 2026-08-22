@@ -38,12 +38,12 @@
                 <div class="inputs">
                     <label for="">
                         <span>Min:</span>
-                        <input type="number" name="" id="" value="1" min="1" max="999">
+                        <input type="number" class="range-input" id="min-num1" value="1" min="1" max="999">
                     </label>
                     <span class="range-separator">to</span>
                     <label for="">
                         <span>Max:</span>
-                        <input type="number" name="" id="" value="10" min="1" max="999">
+                        <input type="number" class="range-input" id="max-num1" value="10" min="1" max="999">
                     </label>
                 </div>
             </div>
@@ -55,12 +55,12 @@
                 <div class="inputs">
                     <label for="">
                         <span>Min:</span>
-                        <input type="number" name="" id="" value="1" min="1" max="999">
+                        <input type="number" class="range-input" id="min-num2" value="1" min="1" max="999">
                     </label>
                     <span class="range-separator">to</span>
                     <label for="">
                         <span>Max:</span>
-                        <input type="number" name="" id="" value="10" min="1" max="999">
+                        <input type="number" class="range-input" id="max-num2" value="10" min="1" max="999">
                     </label>
                 </div>
 
@@ -68,7 +68,12 @@
         </div>
             
         <div class="workspace">
-            <h1 class="equation">67 + 41 = ?</h1>
+            <h1 class="equation" id="equation">
+                <span id="num1">67</span>
+                <span id="operator">+</span>
+                <span id="num2">41</span>
+
+            </h1>
 
             <input type="number" name="" id="user-answer" placeholder="your answer" autofocus>
         </div>
@@ -82,5 +87,6 @@
     </footer>
     
     <script src="script.js"></script>
+    <script src="practice.js"></script>
 </body>
 </html>
