@@ -19,10 +19,10 @@ categoryButtons.forEach(button => {
         } else if (activeCategory === "Multiply") {
             operator.textContent = 'x'
         } else if (activeCategory === "Divide") {
-            operator.textContent = '÷'
+            operator.textContent = '÷';
         }
 
-        console.log('Active Category:', activeCategory);
+        resetStats();
         generateEquation();
     });
 });
@@ -64,7 +64,10 @@ function generateEquation() {
 //Sees if the min and max inputs are changed
 rangeInputs.forEach(input => {
 
-    input.addEventListener('change', generateEquation)
+    input.addEventListener('change', () => {
+        resetStats();
+        generateEquation();
+    });
 });
 
 //Gets the answer from the equation
@@ -84,5 +87,101 @@ function getAnswer(num1, num2, operator) {
     }
 }
 
-//Generates the equation when page loads.
+//Timer
+let startTime = performance.now();
+
+function resetTimer() {
+    startTime = performance.now();
+}
+
+function getTime() {
+    const time = performance.now() - startTime;
+    return (time / 1000).toFixed(1);
+}
+
+//Sees if the answer is correct and tracks the streak and updates accuracy
+const userAnswerInput = document.getElementById('user-answer');
+const streakDisplay = document.getElementById('streak');
+
+let streak = 0;
+let numCorrect = 0;
+let totalAnswered = 0;
+let totalTime = 0;
+
+resetTimer();
+
+userAnswerInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+
+        if (e.target.value === '') {
+            return;
+        }
+
+        const userAnswer = Number(e.target.value);
+        const correctAnswer = getAnswer(num1, num2, activeCategory);
+
+        e.target.value = '';
+        totalAnswered++;
+
+        if (userAnswer === correctAnswer) {
+            streak++;
+            numCorrect++;
+            totalTime += Number(getTime());
+            generateEquation();
+            resetTimer();
+        } else {
+            streak = 0;
+        }
+
+        calculateAccuracy(totalAnswered, numCorrect);
+        avgTime(totalAnswered, totalTime);
+        streakDisplay.textContent = `${streak} streak`;
+    }
+});
+
+//Calculates accuracy
+const accuracyDisplay = document.getElementById('accuracy');
+
+function calculateAccuracy(total, numCorrect) {
+
+    if (total === 0) {
+        accuracyDisplay.textContent = '100% accuracy';
+        return;
+    }
+
+    let accuracy = Math.round((numCorrect / total) * 100);
+    accuracyDisplay.textContent = `${accuracy}% accuracy`
+    
+}
+
+//Calculates the average time
+const avgTimeDisplay = document.getElementById('avg-time');
+
+function avgTime(totalAnswered, totalTime) {
+
+    if (totalAnswered === 0) {
+        avgTimeDisplay.textContent = '0.0s avg time';
+        return;
+    }
+    const avg = (totalTime / numCorrect).toFixed(1);
+    avgTimeDisplay.textContent = `${avg}s avg time`;
+}
+
+//Resets the streak, avg time, and accuracy
+function resetStats() {
+
+    streak = 0;
+    numCorrect = 0;
+    totalAnswered = 0;
+    totalTime = 0;
+
+    resetTimer();
+
+    streakDisplay.textContent = '0 streak';
+    accuracyDisplay.textContent = '100% accuracy';
+    avgTimeDisplay.textContent = '0.0s avg time';
+}
+
+//Generates the equation when page loads and resets stats.
 generateEquation();
+resetStats();
