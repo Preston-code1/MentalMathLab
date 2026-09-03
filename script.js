@@ -35,4 +35,3 @@ buttons.forEach(button => {
         })
     });
 });
-
