@@ -467,7 +467,18 @@ footer button:hover {
     color: var(--bg-color)
 }
 
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--link-color);
+}
+
 /*The page teaching the trick*/
+
 .lesson-tabs {
     display: flex;
     align-items: center;
@@ -507,37 +518,54 @@ footer button:hover {
     background-color: #888b8a;
 }
 
-/*Multiply by 11 page */
+/*learning page */
+.trick-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: calc(100vh - var(--nav-height) - 70px); 
+    overflow: hidden;
+}
+
 .explaination {
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .example {
-    margin: 0.5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 0;
 }
 
 .example h1 {
-    margin-bottom: 1rem;
-}
-
-.example h2 {
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 .example p {
-    margin: 1.5rem 0 0.7rem;
-    color: #676a69;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
 }
 
 .digits, .addition, .answer, .carry {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 4rem;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.example h2 {
+    font-size: 3rem;
+    margin-top: 2rem;
 }
 
 .answer .middle {

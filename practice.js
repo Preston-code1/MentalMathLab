@@ -81,7 +81,9 @@ function getAnswer(num1, num2, operator) {
         case 'Multiply':
             return num1 * num2;
         case 'Divide':
-            return num1 / num2;
+            let num = num1 / num2;
+            let rounded = +num.toFixed(2); 
+            return rounded;
         default:
             return 0;
     }

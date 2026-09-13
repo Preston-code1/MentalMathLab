@@ -35,3 +35,16 @@ buttons.forEach(button => {
         })
     });
 });
+
+//Sees what card is clicked and changes the link
+const trickCards = document.querySelectorAll(".card");
+
+trickCards.forEach(card => {
+    const startBtn = card.querySelector(".start-btn");
+
+    startBtn.addEventListener("click", () => {
+        const trick = card.dataset.trick;
+
+        window.location.href = `tricks.html?trick=${trick}`;
+    });
+});
