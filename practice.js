@@ -160,8 +160,7 @@ function calculateAccuracy(total, numCorrect) {
 const avgTimeDisplay = document.getElementById('avg-time');
 
 function avgTime(totalAnswered, totalTime) {
-
-    if (totalAnswered === 0) {
+    if (numCorrect === 0) {
         avgTimeDisplay.textContent = '0.0s avg time';
         return;
     }

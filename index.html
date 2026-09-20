@@ -14,8 +14,11 @@
         <div class="logo">Mental Math Lab</div>
 
         <div class="links">
-            <button class="menuBtn" onclick="toggleMenu()" aria-label="Open menu">&#9776;</button>
-            <button class="closeBtn" onclick="toggleMenu()" aria-label="Close menu">&#10005;</button>
+            <button class="menuBtn" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul id="menu">
                 <li><a href="index.html">Tricks</a></li>
                 <li><a href="practice.html">Practice</a></li>
@@ -83,6 +86,58 @@
                 </div>
             </div>
 
+            <div class="card" data-category="addition" data-trick="add-left-to-right">
+                <h2>Add left to Right</h2>
+                <p>Adding the biggest place values first, then working down.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="easy-difficulty">easy</span>
+                        <span>·</span>
+                        <span class="add-category">addition</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="subtraction" data-trick="subtract-by-rounding">
+                <h2>Subtract by Rounding</h2>
+                <p>Adding the biggest place values first, then working down.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="easy-difficulty">easy</span>
+                        <span>·</span>
+                        <span class="subtraction-category">subtraction</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="division" data-trick="divide-by-5">
+                <h2>Divide by 5</h2>
+                <p>multiply by 2, then divide by 10</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="easy-difficulty">easy</span>
+                        <span>·</span>
+                        <span class="division-category">division</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="multiplication" data-trick="two-digit-by-one-digit">
+                <h2>Two digit by one digit</h2>
+                <p>Break the number into tens and ones, multiply each part, then add.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="easy-difficulty">easy</span>
+                        <span>·</span>
+                        <span class="multiplication-category">multiplication</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
             <div class="card" data-category="multiplication" data-trick="multiply-by-9">
                 <h2>Multiply by 9</h2>
                 <p>Multiply by 10 then subtract the original number.</p>
@@ -90,15 +145,28 @@
                     <div class="tags">
                         <span class="easy-difficulty">easy</span>
                         <span>·</span>
-                        <span class="multi-category">multiplication</span>
+                        <span class="multiplication-category">multiplication</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="multiplication" data-trick="multiply-by-101">
+                <h2>Multiply by 101</h2>
+                <p>Multiply by 100 then add the original number.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="easy-difficulty">easy</span>
+                        <span>·</span>
+                        <span class="multiplication-category">multiplication</span>
                     </div>
                     <button class="start-btn">Start</button>
                 </div>
             </div>
 
             <div class="card" data-category="multiplication" data-trick="multiply-by-12">
-                <h2>Multiply by 15</h2>
-                <p>Multiply by 10, then add double of the original number.</p>
+                <h2>Multiply by 12</h2>
+                <p>Multiply by 10, multiply by 2, then add the results.</p>
                 <div class="card-footer">
                     <div class="tags">
                         <span class="medium-difficulty">medium</span>
@@ -135,6 +203,84 @@
                 </div>
             </div>
 
+            <div class="card" data-category="multiplication" data-trick="multiply-by-99">
+                <h2>Multiply by 99</h2>
+                <p>Multiply by 100 then subtract by the original number.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="medium-difficulty">medium</span>
+                        <span>·</span>
+                        <span class="multi-category">multiplication</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="multiplication" data-trick="close-together-multiplication">
+                <h2>Close Multiplication</h2>
+                <p>Average the two numbers, square it, then subtract.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="medium-difficulty">medium</span>
+                        <span>·</span>
+                        <span class="multi-category">multiplication</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="division" data-trick="divide-by-50">
+                <h2>Divide by 50</h2>
+                <p>multiply by 2, then divide by 100</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="medium-difficulty">medium</span>
+                        <span>·</span>
+                        <span class="division-category">division</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="addition" data-trick="make-a-100">
+                <h2>Make a 100</h2>
+                <p>Make a 10 but with bigger numbers</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="medium-difficulty">medium</span>
+                        <span>·</span>
+                        <span class="multi-category">addition</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="multiplication" data-trick="square-numbers-near-100">
+                <h2>Square Numbers Near 100</h2>
+                <p>Use 100 as a base, then adjust using the difference.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="medium-difficulty">medium</span>
+                        <span>·</span>
+                        <span class="multi-category">multiplication</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="division" data-trick="divide-by-25">
+                <h2>Divide by 25</h2>
+                <p>Multiply by 4, then divide by 100</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="hard-difficulty">hard</span>
+                        <span>·</span>
+                        <span class="division-category">division</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
             <div class="card" data-category="multiplication" data-trick="multiply-near-100">
                 <h2>Multiply Near 100</h2>
                 <p>Use the distance from 100 to quickly multiply numbers close to 100.</p>
@@ -147,6 +293,46 @@
                     <button class="start-btn">Start</button>
                 </div>
             </div>
+
+            <div class="card" data-category="multiplication" data-trick="two-digit-by-two-digit">
+                <h2>Two Digit by Two Digit</h2>
+                <p>Round one number to make multiplication easier, then correct the difference.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="hard-difficulty">hard</span>
+                        <span>·</span>
+                        <span class="multi-category">multiplication</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="multiplication" data-trick="multiply-near-1000">
+                <h2>Multiply near 1000</h2>
+                <p>Use 1,000 as a base, then adjust using the differences.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="hard-difficulty">hard</span>
+                        <span>·</span>
+                        <span class="multi-category">multiplication</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="division" data-trick="mental-division">
+                <h2>Mental Division</h2>
+                <p>Break the numbers into easier factors, then divide step by step.</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="hard-difficulty">hard</span>
+                        <span>·</span>
+                        <span class="division-category">division</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+
         </div>
     </main>
     

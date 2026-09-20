@@ -5,6 +5,15 @@ const menu = document.getElementById('menu');
 function toggleMenu() {
     nav.classList.toggle('menu-open');
     menu.classList.toggle('show');
+
+    const menuBtn = document.querySelector('.menuBtn');
+    const isOpen = nav.classList.contains('menu-open');
+
+    if (isOpen) {
+        menuBtn.setAttribute('aria-label', 'Close menu');
+    } else {
+        menuBtn.setAttribute('aria-label', 'Open menu');
+    }
 }
 
 document.querySelectorAll('#menu a').forEach(link => {
