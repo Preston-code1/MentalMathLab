@@ -2127,6 +2127,7 @@ function getAnswer(num1, num2, operator) {
 
 //sees if correct
 const userAnswerInput = document.getElementById('user-answer');
+const feedbackDisplay = document.getElementById('feedback');
 
 userAnswerInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -2138,6 +2139,13 @@ userAnswerInput.addEventListener('keydown', (e) => {
 
         if (userAnswer === correctAnswer) {
             generateEquation(min1, max1, min2, max2);
+            feedbackDisplay.textContent = 'Correct!';
+            feedbackDisplay.classList.remove('incorrect');
+            feedbackDisplay.classList.add('correct');
+        } else {
+            feedbackDisplay.textContent = `Incorrect. Try again.`;
+            feedbackDisplay.classList.remove('correct');
+            feedbackDisplay.classList.add('incorrect');
         }
     }
 });

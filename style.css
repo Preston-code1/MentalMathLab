@@ -10,6 +10,8 @@
     --light-border: #e0e0e0;
 
     --bg-color: #fdfcf7;
+
+    --btn-bg-color: #8787ff;
 }
 
 * {
@@ -193,7 +195,7 @@ header p {
 }
 
 .filters button.active {
-    background: rgb(135, 135, 255);
+    background: var(--btn-bg-color);
     color: var(--bg-color);
 }
 
@@ -267,7 +269,7 @@ header p {
 }
 
 .card .start-btn {
-    background-color: rgb(135, 135, 255);
+    background: var(--btn-bg-color);
     color: var(--bg-color);
     border: none;
     padding: 0.5rem 1rem;
@@ -319,7 +321,7 @@ header p {
 }
 
 .catergories button.active {
-    background: rgb(135, 135, 255);
+    background: var(--btn-bg-color);
     color: var(--bg-color);
     border: 1px solid transparent;
 }
@@ -380,7 +382,7 @@ header p {
 }
 
 .inputs input[type="number"]:focus {
-    border-color: rgb(135, 135, 255);
+    border-color: var(--btn-bg-color);
     background-color: #ffffff;
     box-shadow: 0 0 0 2px rgba(135, 135, 255, 0.2);
 }
@@ -436,7 +438,7 @@ header p {
 }
 
 #user-answer:focus {
-    border-color: rgb(135, 135, 255);
+    border-color: var(--btn-bg-color);
     box-shadow: 0 0 0 3px rgba(135, 135, 255, 0.25);
 }
 
@@ -448,6 +450,14 @@ header p {
 #user-answer[type=number] {
     appearance: textfield;
     -moz-appearance: textfield;
+}
+
+#feedback.correct {
+    color: #2e8b57;
+}
+
+#feedback.incorrect {
+    color: #d9534f;
 }
 
 footer {
@@ -476,7 +486,7 @@ footer button {
 }
 
 footer button:hover {
-    background-color: rgb(135, 135, 255);
+    background-color: var(--btn-bg-color);
     color: var(--bg-color)
 }
 
@@ -521,7 +531,7 @@ footer a:hover {
 }
 
 .lesson-tab.active {
-    background: rgb(135, 135, 255);
+    background: var(--btn-bg-color);
     color: var(--bg-color);
 }
 
@@ -582,7 +592,7 @@ footer a:hover {
 }
 
 .answer .middle {
-    background: rgb(135, 135, 255);
+    background: var(--btn-bg-color);
     color: var(--bg-color);
     padding: 0.1rem 0.4rem;
     border-radius: 8px;

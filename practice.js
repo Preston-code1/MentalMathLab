@@ -104,6 +104,7 @@ function getTime() {
 //Sees if the answer is correct and tracks the streak and updates accuracy
 const userAnswerInput = document.getElementById('user-answer');
 const streakDisplay = document.getElementById('streak');
+const feedbackDisplay = document.getElementById('feedback');
 
 let streak = 0;
 let numCorrect = 0;
@@ -131,8 +132,15 @@ userAnswerInput.addEventListener('keydown', (e) => {
             totalTime += Number(getTime());
             generateEquation();
             resetTimer();
+
+            feedbackDisplay.textContent = 'Correct!';
+            feedbackDisplay.classList.remove('incorrect');
+            feedbackDisplay.classList.add('correct');
         } else {
             streak = 0;
+            feedbackDisplay.textContent = `Incorrect! Try again.`;
+            feedbackDisplay.classList.remove('correct');
+            feedbackDisplay.classList.add('incorrect');
         }
 
         calculateAccuracy(totalAnswered, numCorrect);
