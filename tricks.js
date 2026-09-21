@@ -1782,6 +1782,187 @@ if (trick === "multiply-by-11") {
         <h2>= 408</h2>
     </section>
     `;
+} else if (trick === "multiply-near-100-pt2") {
+    trickName = "Multiply Near 100 Pt. 2";
+    activeCategory = "Multiply"
+    min1 = 101;
+    max1 = 110;
+    min2 = 101;
+    max2 = 110;
+
+    main.innerHTML = `
+    <section id="example-1" class="example">
+        <h1>107 x 104</h1>
+
+        <p>Find how far each is above 100:</p>
+
+        <div class="digits">
+            <span>107 → 7</span>
+            <span>104 → 4</span>
+        </div>
+
+        <p>Multiply the excesses:</p>
+
+        <div class="addition">
+            <span>7</span>
+            <span>x</span>
+            <span>4</span>
+            <span>=</span>
+            <span>28</span>
+        </div>
+
+        <p>Add one excess to the other number:</p>
+
+        <div class="addition">
+            <span>104</span>
+            <span>+</span>
+            <span>7</span>
+            <span>=</span>
+            <span>111</span>
+        </div>
+
+        <p>Put them together:</p>
+
+        <div class="answer">
+            <span>111</span>
+            <span class="middle">28</span>
+        </div>
+
+        <h2>= 11128</h2>
+    </section>
+
+    <section id="example-2" class="example hidden">
+        <p>Works the same with other pairs above 100:</p>
+
+        <h1>103 x 106</h1>
+
+        <p>Find how far each is above 100:</p>
+
+        <div class="digits">
+            <span>103 → 3</span>
+            <span>106 → 6</span>
+        </div>
+
+        <p>Multiply the excesses:</p>
+
+        <div class="addition">
+            <span>3</span>
+            <span>x</span>
+            <span>6</span>
+            <span>=</span>
+            <span>18</span>
+        </div>
+
+        <p>Add one excess to the other number:</p>
+
+        <div class="addition">
+            <span>106</span>
+            <span>+</span>
+            <span>3</span>
+            <span>=</span>
+            <span>109</span>
+        </div>
+
+        <p>Put them together:</p>
+
+        <div class="answer">
+            <span>109</span>
+            <span class="middle">18</span>
+        </div>
+
+        <h2>= 10918</h2>
+    </section>
+    `;
+} else if (trick === "multiply-near-1000-pt2") {
+    activeCategory = "Multiply"
+    min1 = 1001;
+    max1 = 1030;
+    min2 = 1001;
+    max2 = 1030;
+
+    main.innerHTML = `
+    <section id="example-1" class="example">
+        <h1>1007 x 1004</h1>
+
+        <p>Find how far each is above 1000:</p>
+
+        <div class="digits">
+            <span>1007 → 7</span>
+            <span>1004 → 4</span>
+        </div>
+
+        <p>Multiply the excesses:</p>
+
+        <div class="addition">
+            <span>7</span>
+            <span>x</span>
+            <span>4</span>
+            <span>=</span>
+            <span>028</span>
+        </div>
+
+        <p>Add one excess to the other number:</p>
+
+        <div class="addition">
+            <span>1004</span>
+            <span>+</span>
+            <span>7</span>
+            <span>=</span>
+            <span>1011</span>
+        </div>
+
+        <p>Put them together:</p>
+
+        <div class="answer">
+            <span>1011</span>
+            <span class="middle">028</span>
+        </div>
+
+        <h2>= 1011028</h2>
+    </section>
+
+    <section id="example-2" class="example hidden">
+        <p>Works the same with other pairs above 1000:</p>
+
+        <h1>1018 x 1012</h1>
+
+        <p>Find how far each is above 1000:</p>
+
+        <div class="digits">
+            <span>1018 → 18</span>
+            <span>1012 → 12</span>
+        </div>
+
+        <p>Multiply the excesses:</p>
+
+        <div class="addition">
+            <span>18</span>
+            <span>x</span>
+            <span>12</span>
+            <span>=</span>
+            <span>216</span>
+        </div>
+
+        <p>Add one excess to the other number:</p>
+
+        <div class="addition">
+            <span>1012</span>
+            <span>+</span>
+            <span>18</span>
+            <span>=</span>
+            <span>1030</span>
+        </div>
+
+        <p>Put them together:</p>
+
+        <div class="answer">
+            <span>1030</span>
+            <span class="middle">216</span>
+        </div>
+
+        <h2>= 1030216</h2>
+    </section>
+    `;
 }
 
 document.title = `${trickName} | Mental Math Lab`;

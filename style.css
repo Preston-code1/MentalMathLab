@@ -596,3 +596,31 @@ footer a:hover {
 .practice-title {
     text-align: center;
 }
+
+/*about page*/
+.about-section {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed var(--light-border);
+}
+
+.about-section:last-child {
+    border-bottom: none;
+}
+
+.about-section h2 {
+    font-family: 'Kalam', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.about-section p {
+    color: var(--muted-text);
+    line-height: 1.6;
+}
+
+.about-section em {
+    color: var(--text-color);
+    font-style: italic;
+}
