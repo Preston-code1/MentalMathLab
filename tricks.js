@@ -361,7 +361,7 @@ if (trick === "multiply-by-11") {
         <p>See how far the first number is from the next 10:</p>
 
         <div class="digits">
-            <span>38 → needs 2</span>
+            <span>38 → 2</span>
         </div>
 
         <p>Take that much from the second number:</p>
@@ -395,7 +395,7 @@ if (trick === "multiply-by-11") {
         <p>See how far the first number is from the next 10:</p>
 
         <div class="digits">
-            <span>56 → needs 4</span>
+            <span>56 → 4</span>
         </div>
 
         <p>Take that much from the second number:</p>
@@ -1036,7 +1036,7 @@ if (trick === "multiply-by-11") {
         <p>See how far the first number is from the next 100:</p>
 
         <div class="digits">
-            <span>380 → needs 20</span>
+            <span>380 → 20</span>
         </div>
 
         <p>Take that much from the second number:</p>
@@ -1070,7 +1070,7 @@ if (trick === "multiply-by-11") {
         <p>See how far the first number is from the next 100:</p>
 
         <div class="digits">
-            <span>560 → needs 40</span>
+            <span>560 → 40</span>
         </div>
 
         <p>Take that much from the second number:</p>
@@ -1874,6 +1874,7 @@ if (trick === "multiply-by-11") {
     </section>
     `;
 } else if (trick === "multiply-near-1000-pt2") {
+    trickName = "Multiply Near 1000 Pt. 2";
     activeCategory = "Multiply"
     min1 = 1001;
     max1 = 1030;
@@ -2131,6 +2132,10 @@ const feedbackDisplay = document.getElementById('feedback');
 
 userAnswerInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
+
+        if (e.target.value === '') {
+            return;
+        }
 
         const userAnswer = Number(e.target.value);
         const correctAnswer = getAnswer(num1, num2, activeCategory);
